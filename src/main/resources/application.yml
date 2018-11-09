@@ -1,0 +1,23 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /ui
+
+security:
+  oauth2:
+    client:
+      clientId: test
+      clientSecret: test
+      accessTokenUri: http://localhost:9000/auth/oauth/token
+      userAuthorizationUri: http://localhost:9000/auth/oauth/authorize
+    resource:
+      userInfoUri: http://localhost:9000/auth/user
+
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  thymeleaf:
+    cache: false
+
+
